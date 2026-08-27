@@ -1,0 +1,31 @@
+name: discord-platform
+label: Discord Realtime Voice
+kind: platform
+version: 0.1.0
+manifest_version: 2
+api_version: 1
+description: >
+  Replaces Hermes' bundled Discord adapter with an OpenAI Realtime voice
+  transport. Spoken turns still execute in the same Hermes session, preserving
+  its tools, memory, personality, and authorization.
+author: Jamie de Paor
+license: MIT
+homepage: https://github.com/jamiedepaor/hermes-discord-realtime
+tags: [discord, voice, realtime, openai]
+requires_env:
+  - name: DISCORD_BOT_TOKEN
+    description: "Discord bot token already used by Hermes"
+    prompt: "Discord bot token"
+    url: "https://discord.com/developers/applications"
+    password: true
+  - name: OPENAI_API_KEY
+    description: "OpenAI API project key used only for Realtime speech"
+    prompt: "OpenAI API key"
+    url: "https://platform.openai.com/api-keys"
+    password: true
+optional_env:
+  - name: DISCORD_ALLOWED_USERS
+    description: "Comma-separated Discord user IDs allowed to use Hermes"
+    prompt: "Allowed Discord user IDs"
+    password: false
+
