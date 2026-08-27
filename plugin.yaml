@@ -2,8 +2,6 @@ name: discord-platform
 label: Discord Realtime Voice
 kind: platform
 version: 0.1.0
-manifest_version: 2
-api_version: 1
 description: >
   Replaces Hermes' bundled Discord adapter with an OpenAI Realtime voice
   transport. Spoken turns still execute in the same Hermes session, preserving
@@ -28,4 +26,3 @@ optional_env:
     description: "Comma-separated Discord user IDs allowed to use Hermes"
     prompt: "Allowed Discord user IDs"
     password: false
-
