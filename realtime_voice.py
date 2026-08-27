@@ -140,7 +140,7 @@ class RealtimeVoiceSession:
                                 "turn_detection": {"type": self.vad},
                             },
                             "output": {
-                                "format": {"type": "audio/pcm"},
+                                "format": {"type": "audio/pcm", "rate": 24000},
                                 "voice": self.voice,
                             },
                         },

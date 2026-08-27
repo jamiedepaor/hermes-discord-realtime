@@ -170,6 +170,8 @@ async def test_realtime_requires_hermes_tool_and_speaks_its_result():
         update = websocket.sent[0]
         assert update["session"]["tool_choice"] == "required"
         assert update["session"]["tools"][0]["name"] == "consult_hermes"
+        assert update["session"]["audio"]["input"]["format"]["rate"] == 24000
+        assert update["session"]["audio"]["output"]["format"]["rate"] == 24000
 
         session._current_turn_user_id = 456
         await session._handle_event(
