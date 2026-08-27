@@ -10,6 +10,8 @@ author: Jamie de Paor
 license: MIT
 homepage: https://github.com/jamiedepaor/hermes-discord-realtime
 tags: [discord, voice, realtime, openai]
+capabilities:
+  - tools.override
 requires_env:
   - name: DISCORD_BOT_TOKEN
     description: "Discord bot token already used by Hermes"
